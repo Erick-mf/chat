@@ -1,0 +1,49 @@
+<section class="flex items-center justify-center min-h-screen bg-gray-100">
+    <form (submit)="signIn()" class="max-w-md mx-auto p-8 bg-gray-100 rounded-lg shadow-lg">
+        <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="name@example.com"
+                required
+                [(ngModel)]="email"
+                class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            />
+        </div>
+
+        <div class="mb-4">
+            <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                [(ngModel)]="password"
+                class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            />
+        </div>
+
+        <div class="mb-6">
+            <button
+                type="submit"
+                class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            >
+                Iniciar Sesión
+            </button>
+            <button
+                type="button"
+                (click)="signInWithGoogle()"
+                class="mt-2 w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            >
+                Iniciar sesión con Google
+            </button>
+        </div>
+
+        <p class="text-center text-sm text-gray-600">
+            ¿No estás registrado?
+            <a routerLink="/register" class="text-blue-500 hover:text-blue-700">Regístrate aquí</a>
+        </p>
+    </form>
+</section>

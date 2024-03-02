@@ -1,0 +1,51 @@
+<section class="flex items-center justify-center min-h-screen bg-gray-100">
+    <form (submit)="signUp($event)" class="max-w-md mx-auto p-8 bg-gray-100 rounded-lg shadow-lg">
+        <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Nombre de usuario"
+                required
+                [(ngModel)]="name"
+                class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            />
+        </div>
+
+        <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="name@example.com"
+                required
+                [(ngModel)]="email"
+                class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            />
+        </div>
+
+        <div class="mb-4">
+            <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                [(ngModel)]="password"
+                class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            />
+        </div>
+
+        <div class="flex justify-between">
+            <button
+                type="submit"
+                class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            >
+                Registrarse
+            </button>
+            <a routerLink="/login">Regresar al login</a>
+        </div>
+    </form>
+</section>
